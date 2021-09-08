@@ -1,0 +1,157 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+     Bienvenue sur le meilleur réseau d'appartements
+{% endblock %}
+
+{% block header %}
+    <h2>Voici le header</h2>
+{% endblock %}
+
+{% block body %}
+    <div class="jumbotron mt-3">
+        <h1 class="display-3">Bienvenue sur SymBNB !</h1>
+        <p class="lead">Nous mettons en relations les voyageurs et le propriétaire qui veulent profiter d'opportunités afin de gagner de l'argent.</p>
+        <hr class="my-4">
+        <p>Vous êtes voyageurs et vous voulez où vous  pourrez loger pour vôtre prochain déplacements</p>
+        <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Voir nos annonces</a> </p>
+    </div>
+    <h2 class="h1 mt-3 mb-4">  Nos appartements stars  </h2>
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header text-center">
+                    3 chambres, <strong> 49&euro; / nuit</strong> <br>
+                    <small> Pas encore noté</small>
+                </div>
+                <img src="https://placehold.it/1000x400" alt="Image de l'appartement" style="height : 200px; width: 100%; display: block">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        Appartement de ouf !
+                    </h4>
+                    <p class="card-text">
+                        lorem ipsum, dolor sit
+                    </p>
+                    <a href="#" class="btn btn-secondary">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header text-center">
+                    3 chambres, <strong> 49&euro; / nuit</strong> <br>
+                    <small> Pas encore noté</small>
+                </div>
+                <img src="https://placehold.it/1000x400" alt="Image de l'appartement" style="height : 200px; width: 100%; display: block">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        Appartement de ouf !
+                    </h4>
+                    <p class="card-text">
+                        lorem ipsum, dolor sit
+                    </p>
+                    <a href="#" class="btn btn-secondary">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header text-center">
+                    3 chambres, <strong> 49&euro; / nuit</strong> <br>
+                    <small> Pas encore noté</small>
+                </div>
+                <img src="https://placehold.it/1000x400" alt="Image de l'appartement" style="height : 200px; width: 100%; display: block">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        Appartement de ouf !
+                    </h4>
+                    <p class="card-text">
+                        lorem ipsum, dolor sit
+                    </p>
+                    <a href="#" class="btn btn-secondary">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="h1 mt-3 mb-4">Nos propriétaire stars ! </h2>
+    <div class="row">
+        <div class="col">
+            <div class="card border-secondary mb-3">
+                <div class="card body">
+                    <h4 class="card-title"> Lior Chamla</h4>
+
+                    <hr>
+
+                    <div class="card-text">
+                        <img src="http://placehold.it/64x64" alt="avatar de Lior Chamla" class="float-left mr-3">
+                        <p>Lorem, ipsum dolor sit amet consectur adipiscing elit.</p>
+                        <a href="#" class="btn btn-success float-right">En savoir plus!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-secondary mb-3">
+                <div class="card body">
+                    <h4 class="card-title"> Lior Chamla</h4>
+
+                    <hr>
+
+                    <div class="card-text">
+                        <img src="http://placehold.it/64x64" alt="avatar de Lior Chamla" class="float-left mr-3">
+                        <p>Lorem, ipsum dolor sit amet consectur adipiscing elit.</p>
+                        <a href="#" class="btn btn-success float-right">En savoir plus!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-secondary mb-3">
+                <div class="card body">
+                    <h4 class="card-title"> Lior Chamla</h4>
+
+                    <hr>
+
+                    <div class="card-text">
+                        <img src="http://placehold.it/64x64" alt="avatar de Lior Chamla" class="float-left mr-3">
+                        <p>Lorem, ipsum dolor sit amet consectur adipiscing elit.</p>
+                        <a href="#" class="btn btn-success float-right">En savoir plus!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{#<h1>{{ title | upper }}</h1>
+    <h2> Le vrai titre est {{title}}</h2>
+    <p>Comment allez-vous ?</p>
+    <a href="{{ path('hello', {'prenom': 'Lior', 'age':31}) }}">Allez vour hello</a>
+
+    
+    {% if age >= 18 %}
+        <p> Vous êtes un adulte</p>
+    {% elseif age >=12%}
+        <p> Vous  êtes un adolescent</p>
+    {% else %}
+        <p> Vous êtes un enfant !</p>
+    {% endif %}
+    
+
+    <ul>
+        {% for compteur in 0..10 %}
+            <li>{{compteur}}</li>
+        {% endfor %}
+    </ul>
+
+    {% for prenom,age in tableau %}
+        {% if loop.first %}
+            <strong>{{prenom}} a {{age}} ans </strong>
+        {% elseif loop.last %}
+            <em>{{prenom}} a {{age}} ans </em>
+        {% else %}
+            <p>{{prenom}} a {{age}} ans </p>
+        {% endif %}
+    {% endfor %}#}
